@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BS AS CONF</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="./css/reset.css">
+  <link rel="stylesheet" href="./css/main.css">
+
+  <!-- JS -->
+  <script src="./js/main.js"></script>
+
+  <!-- GOOGLE FONTS -->
+  <!-- Title: Koulen -->
+  <!-- Main: Open Sans -->
+  <!-- Accent: Parisienne -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Koulen&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&family=Parisienne&display=swap" rel="stylesheet"> 
+
+  <!-- FONTAWESOME -->
+  <script src="https://kit.fontawesome.com/3119857d19.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+  <!-- NAVIGATION -->
+  <header>
+
+    <a href="/">
+      <img class="header__logo" src="./img/codo-a-codo.png" alt="">
+    </a>
+    <a href="/">
+      <p class="header__title title">Bs As Conf</p>
+    </a>
+    
+    <input type="checkbox" class="nav-toggle" id="nav-toggle">
+    <label for="nav-toggle" class="nav-toggle-label">
+      <i class="fa-solid fa-bars"></i>
+    </label>
+    <nav>
+      <ul class="nav__list">
+        <li><a href="#conferencia">La Conferencia</a></li>
+        <li><a href="#oradores">Oradores</a></li>
+        <li><a href="#lugar-y-fecha">Lugar y Fecha</a></li>
+        <li><a href="#orador">Conviértete en Orador</a></li>
+        <li><a href="/">Comprar Tickets</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <!-- Carousel de imágenes relacionadas + Texto introductorio superpuesto -->
+  <section id="conferencia" class="hero">
+    
+    <div class="hero__carousel">
+      <div class="carousel__slide"></div>
+      <div class="carousel__slide"></div>
+      <div class="carousel__slide"></div>
+    </div>
+
+    <div class="hero__overlay">
+      <div class="overlay-text">
+      <h1 class="title">Bs As Conf</h1>
+      <p>Bs As llega por primera vez a Argentina. Un evento para compartir con nuestra comunidad el conocimiento y experiencia de los expertos que están creando el futuro de Internet. Ven a conocer a miembros del evento, a otros estudiantes de Codo a Codo y los oradores de primer nivel que tenemos para ti. Te esperamos!</p>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ORADORES -->
+  <!-- Tres elementos "card" con foto del orador, dos "tags" que indican la temática, y pequeño texto descriptivo -->
+  <section id="oradores" class="oradores">
+    <p class="subtitle">Conocé a los</p>
+    <h2 class="title">Oradores</h2>
+
+    <div class="oradores__cards">
+
+      <div class="card">
+        <img src="./img/speaker1.jpg" alt="Orador 1">
+        <div class="card-buttons">
+          <button class="btn-primary">JavaScript</button>
+          <button class="btn-secondary">Node.js</button>
+        </div>
+        <p class="card-title">Ema Chang</p>
+        <p class="card-text">En este workshop aprenderemos sobre conceptos importantes que los desarrolladores deben tener en cuenta para crear aplicaciones seguras, y veremos técnicas para combatir vulnerabilidades en JavaScript, Apex (Salesforce) y Node.js.</p>
+      </div>
+
+      <div class="card">
+        <img src="./img/speaker2.jpg" alt="Orador 2">
+        <div class="card-buttons">
+          <button class="btn-primary">Automation</button>
+          <button class="btn-secondary">Robotframework</button>
+        </div>
+        <p class="card-title">Darío Alesso</p>
+        <p class="card-text">Mitos de la automatización. Breve reseña de Robotframework como resultado de un proceso de migración de la práctica de automation hacia las metodologías agiles. </p>
+      </div>
+      <div class="card">
+        <img src="./img/speaker3.jpg" alt="Orador 3">
+        <div class="card-buttons">
+          <button class="btn-primary btn-variant">Research</button>
+          <button class="btn-secondary btn-variant">MVP</button>
+        </div>
+        <p class="card-title">Martina Abreu</p>
+        <p class="card-text">Te daremos tips para hacer research, llegar a un insight y darle forma al producto. ¿Cómo lo vamos a hacer? Nos sumergiremos desde la necesidad / oportunidad hasta la planificación del MVP.</p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- LUGAR Y FECHA -->
+  <!-- Modal dividido al medio con imagen a la izquierda, y texto a la derecha indicando lugar y fecha del evento -->
+  <section id="lugar-y-fecha" class="lugar-y-fecha">
+    <div class="modal">
+      <div class="modal__col col-left"></div>
+      <div class="modal__col col-right">
+        <p class="modal-title">11/09/2022 - Distrito Tecnologico</p>
+        <p>
+          Creado en el año 2008, el Distrito Tecnológico es un centro de promoción y desarrollo de conocimiento que recibe empresas de tecnologías de la información y comunicación (TICs) y les brinda benéficos e incentivos financieros. Su objetivo es fomentar a la industria TIC de alto valor agregado y desarrollar un espacio donde conviva la identidad cultural existente con las empresas TIC, se trabaje, se estudie, y se viva.
+          <br><br>
+          Se ubica estratégicamente en la Zona Sur de la Ciudad de Buenos Aires, en línea con la estrategia del GCBA que trabaja en la revitalización y desarrollo de la zona Sur de la Ciudad. Incluye principalmente el barrio de Parque Patricios y abarca 328 hectáreas que se extienden hasta los barrios de Boedo, al norte, y Nueva Pompeya, al sur. El perímetro está marcado por: Avenidas Sáenz, Boedo, Chiclana, Sánchez de Loria y Brasil, las calles Alberti y Manuel García y la Avenida Amancio Alcorta, en ambas aceras.
+        </p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- CONVIÉRTETE EN ORADOR -->
+  <!-- Pequeño texto invitando a inscribirse como orador + Forma de inscripción con: nombre, apellido, text-input -->
+  <section id="orador" class="orador">
+    <p class="subtitle">Convertite en</p>
+    <h2 class="title">Orador</h2>
+    <p>Podés inscribirte para dar una charla en <span>Conf Bs As</span>. 
+    </p>
+
+    <form class="orador-form" action="#" method="post">
+      <div class="form-header">
+        <input type="text" name="first-name" placeholder="Nombre">
+        <input type="text" name="last-name" placeholder="Apellido">
+      </div>
+      <textarea name="message" cols="50" rows="10" placeholder="¿De qué te gustaría hablar?"></textarea>
+
+      <button class="btn-submit btn-primary btn-variant" type="submit" name="submit">Enviar</button>
+
+      <p class="form-note">* No olvides incluir el nombre de tu charla</p>
+    </form>
+
+  </section>
+
+  <!-- FOOTER -->
+  <!-- Listado de links distintos al header -->
+  <footer>
+    <div class="footer__list">
+      <div class="col-left">
+        <ul>
+          <li><a href="">Preguntas Frecuentes</a></li>
+          <li><a href="">Contáctanos</a></li>
+          <li><a href="">Prensa</a></li>
+          <li><a href="">Conferencias</a></li>
+          <li><a href="">Términos y Condiciones</a></li>
+          <li><a href="">Privacidad</a></li>
+          <li><a href="">Estudiantes</a></li>
+        </ul>
+      </div>
+      <div class="col-right">
+        <p>Seguinos en nuestras redes</p>
+        <div class="social-icons">
+          <a href="">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+          <a href="">
+            <i class="fa-brands fa-github"></i>
+          </a>
+          <a href="">
+            <i class="fa-brands fa-twitter"></i>
+          </a>
+        </div>
+        
+        
+      </div>
+      
+    </div>
+  </footer>
+  
+</body>
+</html>
