@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>BS AS CONF</title>
+  <title>CODO A CONF</title>
 
   <!-- CSS -->
   <link rel="stylesheet" href="./css/reset.css">
@@ -39,7 +39,7 @@
       <img class="header__logo" src="./img/codo-a-codo.png" alt="">
     </a>
     <a href="/">
-      <p class="header__title title">Bs As Conf</p>
+      <p class="header__title title">Codo a Conf</p>
     </a>
     
     <input type="checkbox" class="nav-toggle" id="nav-toggle">
@@ -69,8 +69,8 @@
 
     <div class="hero__overlay">
       <div class="overlay-text">
-      <h1 class="title">Bs As Conf</h1>
-      <p>Bs As llega por primera vez a Argentina. Un evento para compartir con nuestra comunidad el conocimiento y experiencia de los expertos que están creando el futuro de Internet. Ven a conocer a miembros del evento, a otros estudiantes de Codo a Codo y los oradores de primer nivel que tenemos para ti. Te esperamos!</p>
+      <h1 class="title">Codo A Conf</h1>
+      <p>La primera edición de Codo a Conf se acerca! Un evento para compartir con nuestra comunidad el conocimiento y experiencia de los expertos que están creando el futuro de Internet. Ven a conocer a miembros del evento, a otros estudiantes de Codo a Codo y los oradores de primer nivel que tenemos para ti. Te esperamos!</p>
       </div>
     </div>
 
@@ -138,7 +138,7 @@
   <section id="orador" class="orador">
     <p class="subtitle">Convertite en</p>
     <h2 class="title">Orador</h2>
-    <p>Podés inscribirte para dar una charla en <span>Conf Bs As</span>. 
+    <p>Podés inscribirte para dar una charla en <span>Codo A Conf</span>. 
     </p>
 
     <form class="orador-form" action="#" method="post">
@@ -162,7 +162,7 @@
 
     <p class="subtitle">Obtené tu</p>
     <h2 class="title">Ticket</h2>
-    <p>El valor del ticket es de $200, pero tenés muchos descuentos disponibles.</span>. 
+    <p>El valor del ticket es de $200, pero tenés muchos descuentos disponibles. 
     </p>
 
     <div class="discount__cards">
@@ -186,20 +186,26 @@
       </div>
     </div> 
 
-    <form class="discount-form" action="#" method="get">
+    <form id="discount-form" class="discount-form" action="#" method="get">
 
       <div class="name-area">
-        <input type="text" name="first-name" placeholder="Nombre">
-        <input type="text" name="last-name" placeholder="Apellido">
+        <input type="text" name="first-name" placeholder="Nombre" required>
+        <input type="text" name="last-name" placeholder="Apellido" required>
       </div>
       <div class="email-area">
-        <input type="email" placeholder="Correo">
+        <input type="email" placeholder="Correo" required>
       </div>
 
       <div class="tickets-area">
         <div class="form-col">
-          <label for="cantidad">Cantidad</label>
-          <input id="cantidad" type="text" name="cantidad" placeholder="Cantidad">
+          <label for="cantidad" >Cantidad</label>
+          <select name="cantidad" id="cantidad">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+          </select>
         </div> 
         <div class="form-col">       
           <label for="categoria">Categoría</label>
@@ -217,11 +223,20 @@
         <button class="btn-borrar btn-primary" type="reset" id="btn-borrar">Borrar</button> 
         <button class="btn-resumen btn-secondary btn-variant" type="button" id="btn-resumen">Resumen</button>
       </div>
-      <button class="btn-submit btn-primary btn-variant" type="submit" name="submit">Comprar</button>
+      <button id="btn-comprar" class="btn-submit btn-primary btn-variant" type="button" name="comprar">Comprar</button>
 
     </form>
 
-      </section>  
+    <div id="popup" class="popup">
+      <div class="popup-body">
+        <h2 class="title">Felicidades!</h2>
+        <p>Tu compra fue realizada con éxito 
+        </p>
+        <button id="btn-cerrar" class="btn-popup btn-primary">Cerrar</button>
+      </div>
+    </div>
+
+  </section>  
 
   <!-- FOOTER -->
   <!-- Listado de links distintos al header -->
