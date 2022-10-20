@@ -13,6 +13,11 @@
 
   <!-- JS -->
   <script src="./js/main.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded" , function() {
+      contentLoaded();
+    })
+  </script>
 
   <!-- GOOGLE FONTS -->
   <!-- Title: Koulen -->
@@ -150,6 +155,74 @@
 
   </section>
 
+  <!-- TICKETS -->
+  <!-- Formulario para comprar entradas. Pueden aplicarse tres tipos de descuento: ESTUDIANTE, TRAINEE, JUNIOR -->
+  <section id="tickets" class="tickets">
+
+
+    <p class="subtitle">Obtené tu</p>
+    <h2 class="title">Ticket</h2>
+    <p>El valor del ticket es de $200, pero tenés muchos descuentos disponibles.</span>. 
+    </p>
+
+    <div class="discount__cards">
+      <div class="card discount-type">
+        <p class="discount-title">Estudiante</p>
+        <p class="discount-subtitle">Tienen un descuento de</p>
+        <p class="discount-value">80%</p>
+        <p class="discount-condition">* presentar documentación</p>
+      </div>
+      <div class="card discount-type">
+        <p class="discount-title">Trainee</p>
+        <p class="discount-subtitle">Tienen un descuento de</p>
+        <p class="discount-value">50%</p>
+        <p class="discount-condition">* presentar documentación</p>
+      </div> 
+      <div class="card discount-type">
+        <p class="discount-title">Junior</p>
+        <p class="discount-subtitle">Tienen un descuento de</p>
+        <p class="discount-value">15%</p>
+        <p class="discount-condition">* presentar documentación</p>
+      </div>
+    </div> 
+
+    <form class="discount-form" action="#" method="get">
+
+      <div class="name-area">
+        <input type="text" name="first-name" placeholder="Nombre">
+        <input type="text" name="last-name" placeholder="Apellido">
+      </div>
+      <div class="email-area">
+        <input type="email" placeholder="Correo">
+      </div>
+
+      <div class="tickets-area">
+        <div class="form-col">
+          <label for="cantidad">Cantidad</label>
+          <input id="cantidad" type="text" name="cantidad" placeholder="Cantidad">
+        </div> 
+        <div class="form-col">       
+          <label for="categoria">Categoría</label>
+          <select name="categoria" id="categoria">
+            <option value="sin_descuento">Sin Descuento</option>
+            <option value="estudiante">Estudiante</option>
+            <option value="trainee">Trainee</option>
+            <option value="junior">Junior</option>
+          </select>
+        </div>
+      </div>
+
+      <input type="text" name="total" class="total" id="total" value="Total a Pagar: $">
+      <div class="tickets-buttons">
+        <button class="btn-borrar btn-primary" type="reset" id="btn-borrar">Borrar</button> 
+        <button class="btn-resumen btn-secondary btn-variant" type="button" id="btn-resumen">Resumen</button>
+      </div>
+      <button class="btn-submit btn-primary btn-variant" type="submit" name="submit">Comprar</button>
+
+    </form>
+
+      </section>  
+
   <!-- FOOTER -->
   <!-- Listado de links distintos al header -->
   <footer>
@@ -178,7 +251,6 @@
             <i class="fa-brands fa-twitter"></i>
           </a>
         </div>
-        
         
       </div>
       

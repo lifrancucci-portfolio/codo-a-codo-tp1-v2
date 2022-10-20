@@ -6,6 +6,12 @@
   --clr-main: #E3E3E3;
   --clr-accent: #9A6AFF;
 
+  /* BOTONES */
+  --clr-btn-primary: #D81E5B;
+  --clr-btn-primary-variant: #FF7E6B;
+  --clr-btn-secondary: #3C91E6;
+  --clr-btn-secondary-variant: #00A878;
+
   /* TIPOGRAFÍA */
   --font-title: 'Koulen';
   --font-main: 'Open Sans', sans-serif;
@@ -69,16 +75,16 @@ button {
   box-shadow: 5px 5px var(--clr-accent);
 }
 .btn-primary {
-  background-color: #D81E5B;
+  background-color: var(--clr-btn-primary);
 }
 .btn-primary.btn-variant {
-  background-color: #FF7E6B;
+  background-color: var(--clr-btn-primary-variant);
 }
 .btn-secondary {
-  background-color: #3C91E6;
+  background-color: var(--clr-btn-secondary);
 }
 .btn-secondary.btn-variant {
-  background-color: #00A878;
+  background-color: var(--clr-btn-secondary-variant);
 }
 input:focus::placeholder,
 textarea:focus::placeholder {
@@ -253,6 +259,9 @@ nav {
   font-weight: bold;
   margin-bottom: .5rem;
 }
+.oradores__cards .card-text {
+  font-size: .8rem;
+}
 
 /* ************** LUGAR Y FECHA ************** */
 .lugar-y-fecha > .modal {
@@ -284,6 +293,7 @@ nav {
   flex-direction: column;
   align-items: center;
   height: 100vh;
+  margin-bottom: 6rem;
 }
 .orador-form {
   background-color: var(--clr-accent);
@@ -329,6 +339,107 @@ nav {
   transition: transform .2s ease-out;
 }
 .orador-form .btn-submit:hover {
+  transform: translate(5px, 5px);
+  box-shadow: none;
+}
+
+/* ************** TICKETS ************** */
+.tickets {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.discount__cards {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-around;
+  margin: 2rem 0;
+}
+.discount__cards > .card {
+  background-color: var(--clr-main);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 270px;
+  height: 250px;
+  border-radius: 15px;
+  box-shadow: 20px 20px var(--clr-accent);
+  margin: 2rem;
+  padding: 3rem 1rem;
+}
+.discount__cards .discount-title {
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin-bottom: .5rem;
+  text-transform: uppercase;
+}
+.discount__cards .discount-value {
+  font-size: 3rem;
+  margin: 1rem;
+  font-weight: bold;
+}
+.discount__cards > .card:hover > .discount-value {
+  transform: scale(1.05);
+  transition: transform .2s ease-out;
+}
+.discount__cards .discount-condition {
+  font-size: .8rem;
+  font-style: italic;
+}
+.discount-form {
+  background-color: var(--clr-accent);
+  background-color: var(--clr-accent);
+  margin-top: 1.5rem;
+  padding: 3rem 1.5rem;
+  border-radius: 15px;
+  box-shadow: 20px 20px var(--clr-main);
+}
+.discount-form .name-area,
+.discount-form .tickets-area {
+  display: flex;
+  justify-content: space-between;
+}
+.discount-form .form-col {
+  display: flex;
+  flex-direction: column;
+  width: 49%;
+}
+.discount-form input {
+  width: 100%;
+  margin-bottom: 1.5rem;
+}
+.discount-form input:first-child {
+  margin-right: .5rem;
+}
+.discount-form input,
+.discount-form select {
+  font-family: var(--font-main);
+  font-size: 1rem;
+  color: gray;
+  border: none;
+  border-radius: 5px;
+  padding: .5rem;
+}
+.discount-form .tickets-buttons {
+  display: flex;
+}
+.discount-form .btn-borrar,
+.discount-form .btn-resumen,
+.discount-form .btn-submit {
+  cursor: pointer;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  display: block;
+  width: 100%;
+  margin-top: 1.5rem;
+  padding: .5rem;
+  box-shadow: 5px 5px var(--clr-main);
+  transition: transform .2s ease-out;
+}
+.discount-form .btn-borrar:hover,
+.discount-form .btn-resumen:hover,
+.discount-form .btn-submit:hover {
   transform: translate(5px, 5px);
   box-shadow: none;
 }
